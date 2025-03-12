@@ -225,14 +225,17 @@ function PremiumStepIcon(props) {
       {completed ? (
         <AnimatedCheckMark />
       ) : (
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.4 }}
-          whileHover={{ scale: 1.1 }}
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '100%',
+            height: '100%'
+          }}
         >
           {icon}
-        </motion.div>
+        </div>
       )}
     </PremiumStepIconRoot>
   );
